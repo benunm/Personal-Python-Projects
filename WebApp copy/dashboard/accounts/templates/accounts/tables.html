@@ -1,0 +1,27 @@
+{% extends 'base2.html' %}
+
+{% block body %}
+
+<div class=container>
+<h1>{{code}}</h1>
+</div>
+	<br>
+	<div class=container>
+		<table class=table_style>
+			<tr class=tr>
+				{% for header in headers %} 
+				<th class=table_style>{{header}}</th>
+				{% endfor %}
+			</tr>
+
+			{% for row in data %}
+			<tr class=tr>
+				{% for datum in row %}
+				<td class=table_style>{{datum}}</td>
+				{% endfor %}
+			</tr>
+			{% endfor %}	
+		</table>
+	</div>
+<br><br><br><br><br><br><br><br>
+{% endblock %}

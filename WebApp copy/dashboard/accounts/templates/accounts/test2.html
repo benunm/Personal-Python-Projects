@@ -1,0 +1,22 @@
+{% extends 'base2.html' %}
+
+{% block body %}
+
+
+<div class=container>
+	<h1>I'm a header</h1>
+	{% for table in tables_data %} 
+		<a href="/account/test_page/{{table.name}}">
+			<button class={{table.name}} type='submit'>{{table.name}}
+			<br>{{table.record_set}}
+			</button>
+		</a>
+	{% endfor %}		
+</div>
+<br>
+<div class=container>
+	<a href="/account/dbtest">
+	<button>DB Connection Test</button>
+	</a>
+</div>
+{% endblock %}
