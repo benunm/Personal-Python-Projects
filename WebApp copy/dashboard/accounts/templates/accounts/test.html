@@ -1,0 +1,44 @@
+
+
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<div class=container>
+	<h1>I'm a header</h1>
+	
+	{% for i in code810 %}
+		<a href="http://google.com">
+			<button class=code_810 type='submit'>
+			{{i.DOCTYPE}}
+			<br>
+			{{i.Record_Set}}
+			</button>
+		</a>
+	{% endfor %}
+
+	{% for i in code404 %}
+		<a href="http://google.com">
+			<button class=code_404 type='submit'>{{i.DOCTYPE}}</button>
+		</a>
+	{% endfor %}
+
+	{% for i in code856 %}
+		<a href="http://google.com">
+			<button class=code_856 type='submit'>{{i.DOCTYPE}}</button>
+		</a>
+	{% endfor %}
+
+	
+	{% for tup in result.items %}
+		{% for record in tup.1 %}
+				<button class=1 type='submit'>{{tup.1}}</button>
+		{% endfor %}			
+	{% endfor %}
+
+{% endblock %}
+
+</div>
+
+

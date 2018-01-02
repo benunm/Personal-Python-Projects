@@ -1,0 +1,16 @@
+{% extends 'base2.html' %}
+
+{% block body %}
+
+
+<div class=container>
+	<h1>I'm a header</h1>
+	{% for button in buttons_data %} 
+		<a href="/account/buttons/{{button.style_class}}">
+			<button class={{button.style_class}} type='submit'>{{button.name}}
+			<br>{{button.record_set}}
+			</button>
+		</a>
+	{% endfor %}		
+</div>
+{% endblock %}
